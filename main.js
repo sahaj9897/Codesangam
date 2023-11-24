@@ -152,10 +152,70 @@ fetch(apiUrl)
           newsContainer.appendChild(newArticleElement);
         }
       }
-    }, 5000);//i have set the interval to 3000millisec when needed change it 
+    }, 5000);
   })
   .catch(error => {
     console.error('Fetch error:', error);
   });
+
+  dragElement(document.getElementById("calculator-container"));
+
+document.getElementById("calculator-button").addEventListener("click", function() {
+  document.getElementById("calculator-container").style.display = "block";
+});
+
+document.getElementById("close-calculator").addEventListener("click", function() {
+  document.getElementById("calculator-container").style.display = "none";
+});
+
+// Calculator logic
+let display = document.getElementById("calc-display");
+
+function appendToDisplay(value) {
+  display.value += value;
+}
+
+function calculate() {
+  try {
+    display.value = eval(display.value);
+  } catch (error) {
+    display.value = "Error";
+  }
+}
+
+
+function dragElement(elmnt) {
+  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "-header")) {
+    document.getElementById(elmnt.id + "-header").onmousedown = dragMouseDown;
+  } else {
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
 
   

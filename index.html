@@ -30,13 +30,13 @@
 
                     <img class="d-block w-100" src="images/_d2b95cc4-3f13-4c93-a4ef-96dcff1ac94b.jpg" alt="First slide">
                     <div class="carousel-caption text-pop-up-top">
-                      <h1 class="animated-text">Currency converter</h1>
+                      <h1 class="animated-text">Keeping track of exchange rate is a tedious task.</h1>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <img class="d-block w-100" src="images/CURRENCY CONVERTER (1).png" alt="Second slide">
                     <div class="carousel-caption text-pop-up-top">
-                      <h1>Chandan</h1>
+                      <h1>Our site gives accurate data about currency rate exchange</h1>
                     </div>
                   </div>
                   <div class="carousel-item">
@@ -150,7 +150,28 @@
         </section>
 
         <div class="conversion-table">
+        </div>
 
+        <div id="calculator-button" class="floating-button">Calculator</div>
+        <div id="calculator-container" class="calculator-container">
+          <div id="calculator-header" class="calculator-header">
+            <span id="close-calculator" class="close">&times;</span>
+          </div>
+          <div id="calculator-body" class="calculator-body">
+            <input type="text" id="calc-display" class="calc-display" readonly>
+            <div class="calc-buttons">
+              <button onclick="appendToDisplay('7')">7</button>
+              <button onclick="appendToDisplay('8')">8</button>
+              <button onclick="appendToDisplay('9')">9</button>
+              <button onclick="appendToDisplay('6')">6</button>
+              <button onclick="appendToDisplay('5')">5</button>
+              <button onclick="appendToDisplay('4')">4</button>
+              <button onclick="appendToDisplay('3')">3</button>
+              <button onclick="appendToDisplay('2')">2</button>
+              <button onclick="appendToDisplay('1')">1</button>
+              <button onclick="calculate()">=</button>
+            </div>
+          </div>
         </div>
 
     </main>
