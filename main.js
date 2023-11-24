@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', function () {
 // integrating news side now
 
 const apiKey = '5eb06469a7464d679132c53d8ae4bf0c';
-const keyword = 'Currency';
-const fromDate = '2023-11-22';
+const keyword = 'MOney';
+const fromDate = '2023-11-23';
 
 const apiUrl = `https://newsapi.org/v2/everything?q=${keyword}&from=${fromDate}&apiKey=${apiKey}`;
 
