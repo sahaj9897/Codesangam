@@ -13,5 +13,10 @@
   },
   "dependencies": {
     "@everapi/currencyapi-js": "^1.0.6"
-  }
+  },
+  "main": "main.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

@@ -2,6 +2,7 @@ URL="https://api.currencyapi.com/v3/latest?apikey=cur_live_TJFnsmPL7RAGzfG6Vld3f
 import CurrencyAPI from '@everapi/currencyapi-js';
 
 
+
 const currencyApi = new CurrencyAPI('cur_live_TJFnsmPL7RAGzfG6Vld3fnVWJUOEdHImN5np1E0I');
 const conversionHistory = []; // Array to store conversion history
 
