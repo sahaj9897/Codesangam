@@ -173,13 +173,37 @@ let display = document.getElementById("calc-display");
 
 function appendToDisplay(value) {
   display.value += value;
+  display.setAttribute('value', display.value);
+}
+
+function clearDisplay() {
+  display.value = "";
+  display.setAttribute('value', display.value);
+}
+
+function add() {
+  appendToDisplay('+');
+}
+
+function subtract() {
+  appendToDisplay('-');
+}
+
+function multiply() {
+  appendToDisplay('*');
+}
+
+function divide() {
+  appendToDisplay('/');
 }
 
 function calculate() {
   try {
     display.value = eval(display.value);
+    display.setAttribute('value', display.value);
   } catch (error) {
     display.value = "Error";
+    display.setAttribute('value', display.value);
   }
 }
 
