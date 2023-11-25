@@ -152,7 +152,7 @@ fetch(apiUrl)
           newsContainer.appendChild(newArticleElement);
         }
       }
-    }, 5000);
+    }, 5000);q
   })
   .catch(error => {
     console.error('Fetch error:', error);
